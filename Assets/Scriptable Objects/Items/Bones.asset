@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e6fe58e6a22554e811f5fed90f6e33, type: 3}
   m_Name: Bones
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6074002660636742149, guid: 11b022dc185618b4497f3b061053e911, type: 3}
+  prefab: {fileID: 6262978107600580127, guid: d184750ca2862a641917cebc615c15e1, type: 3}
   type: 2
   Description: Left Bones of players hand.

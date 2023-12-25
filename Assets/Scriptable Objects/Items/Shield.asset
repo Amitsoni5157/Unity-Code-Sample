@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa9862dbf4e5f3489a5a23e5e6cbedf, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1972019823339886536, guid: a37bd0933f9078c4b8e8d5520c6311d4, type: 3}
+  prefab: {fileID: 7279549479902216164, guid: c231c9e6d8b7ecd4cbd58be07deab9c5, type: 3}
   type: 1
   Description: Kind of weapon which can slice in 2 piece.
   atackBonus: 0
