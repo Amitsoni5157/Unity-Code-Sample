@@ -1813,11 +1813,11 @@ RectTransform:
   m_Father: {fileID: 981050274}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35, y: 18}
-  m_SizeDelta: {x: 246.05219, y: 116.757996}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 220, y: 300}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1228356335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,15 +1831,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4bd3e566c6cd1f744a86f405e6db1ff2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1868,12 +1868,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95985661f5fd4b6499b7cccd0a383639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryPrefab: {fileID: 1791037599460717527, guid: 9289de03b4c334145985c73a0ba45944, type: 3}
   inventory: {fileID: 11400000, guid: 4a00e955df221d34eb81fd609a2e5557, type: 2}
-  X_Start: 10
-  Y_Start: 110
-  X_Space_Between_Items: 35
-  Number_Of_Coloumn: 6
-  Y_Space_Between_Items: 35
+  X_Start: -170
+  Y_Start: 105
+  X_Space_Between_Items: 55
+  Number_Of_Coloumn: 3
+  Y_Space_Between_Items: 55
 --- !u!1 &1245845699
 GameObject:
   m_ObjectHideFlags: 0

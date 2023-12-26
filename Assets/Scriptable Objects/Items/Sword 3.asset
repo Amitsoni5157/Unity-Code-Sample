@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa9862dbf4e5f3489a5a23e5e6cbedf, type: 3}
   m_Name: Sword 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1940936156906436159, guid: 615500cc6dc4db14c8a4f10c31500d73, type: 3}
+  Id: 4
+  uiDisplay: {fileID: 92988425954246417, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
   type: 1
   Description: Kind of weapon which can slice in 2 piece.
-  atackBonus: 10
-  defanceBonus: 0
+  buffs:
+  - attributes: 3
+    value: 0
+    min: 5
+    max: 50

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6730c87a21eb764fb2c3286b1b17976, type: 3}
   m_Name: Monkfish
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6488324380953805985, guid: c8a4005848a478f4ba10e7a7a144bfc4, type: 3}
+  Id: 0
+  uiDisplay: {fileID: 6416730700686628713, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
   type: 0
   Description: Kind of fis which is eatable.
   restoreHealthValue: 16
