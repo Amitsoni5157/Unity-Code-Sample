@@ -36,14 +36,14 @@ public class DisplayInventory : MonoBehaviour
 
             if (itemDisplayed.ContainsKey(inventory.Container.Items[i]))
             {
-                itemDisplayed[slot].GetComponentInChildren<TextMeshPro>().text = slot.amount.ToString("n0");
+                itemDisplayed[slot].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
             }
             else
             {
                 var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
                 obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                TextMeshPro textMeshPro = obj.GetComponentInChildren<TextMeshPro>();
+                TextMeshProUGUI textMeshPro = obj.GetComponentInChildren<TextMeshProUGUI>();
                 if (textMeshPro != null && inventory != null && inventory.Container != null && i < inventory.Container.Items.Count && slot != null)
                 {
                     textMeshPro.text = slot.amount.ToString("n0");
@@ -67,7 +67,7 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            TextMeshPro textMeshPro = obj.GetComponentInChildren<TextMeshPro>();
+            TextMeshProUGUI textMeshPro = obj.GetComponentInChildren<TextMeshProUGUI>();
             if (textMeshPro != null && inventory != null && inventory.Container != null && i < inventory.Container.Items.Count && slot != null)
             {
                 textMeshPro.text = slot.amount.ToString("n0");
