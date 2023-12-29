@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5c12e2cd7e6e0049a6e39bcc56ae303, type: 3}
-  m_Name: Sword 3
+  m_Name: Sword 4
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: -4330735260778472016, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  uiDisplay: {fileID: -7296337056529428220, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
   stackable: 0
   type: 2
   Description: 

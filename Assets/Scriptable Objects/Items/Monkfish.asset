@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6730c87a21eb764fb2c3286b1b17976, type: 3}
-  m_Name: Monkfish
+  m_Script: {fileID: 11500000, guid: a5c12e2cd7e6e0049a6e39bcc56ae303, type: 3}
+  m_Name: monkfish
   m_EditorClassIdentifier: 
-  Id: 0
-  uiDisplay: {fileID: 6416730700686628713, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  uiDisplay: {fileID: 7084260402273260374, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  stackable: 1
   type: 0
-  Description: Kind of fis which is eatable.
-  restoreHealthValue: 16
+  Description: 
+  data:
+    name: 
+    Id: 7
+    buffs: []
