@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Boots 1
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: 824011574517451391, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  CharacterDisplay: {fileID: -6173053900511452925, guid: b5ad3e3f86ac708438b2f3490322bcc6, type: 3}
   stackable: 0
   type: 4
   Description: 
   data:
     name: 
-    Id: -1
-    buffs: []
+    Id: 1
+    buffs:
+    - attributes: 0
+      value: 0
+      min: 1
+      max: 20

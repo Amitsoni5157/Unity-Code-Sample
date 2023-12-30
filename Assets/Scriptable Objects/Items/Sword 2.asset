@@ -13,10 +13,24 @@ MonoBehaviour:
   m_Name: Sword 2
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: -5421027211986494622, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  CharacterDisplay: {fileID: -927199367670048503, guid: c9aacc175fa79924b9356d5252824517, type: 3}
   stackable: 0
   type: 2
   Description: 
   data:
     name: 
-    Id: -1
-    buffs: []
+    Id: 10
+    buffs:
+    - attributes: 0
+      value: 0
+      min: 1
+      max: 100
+    - attributes: 3
+      value: 0
+      min: 1
+      max: 100
+    - attributes: 1
+      value: 0
+      min: 1
+      max: 40
+  boneNames: []

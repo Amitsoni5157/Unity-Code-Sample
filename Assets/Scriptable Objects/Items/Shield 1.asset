@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Shield 1
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: -8407567668883137275, guid: 5e6a5d7d2e0b46d438cb0860d631bd56, type: 3}
+  CharacterDisplay: {fileID: -927199367670048503, guid: 4cff44992c81b1f4bb3f0475c4fa7f14, type: 3}
   stackable: 0
   type: 3
   Description: 
   data:
     name: 
-    Id: -1
-    buffs: []
+    Id: 8
+    buffs:
+    - attributes: 3
+      value: 0
+      min: 0
+      max: 20
+  boneNames: []

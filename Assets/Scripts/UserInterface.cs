@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System;
 
 public abstract class UserInterface : MonoBehaviour
 {
@@ -17,51 +18,36 @@ public abstract class UserInterface : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < inventory.Container.Items.Length; i++)
+        for (int i = 0; i < inventory.GetSlots.Length; i++)
         {
-            inventory.Container.Items[i].parent = this;
+            inventory.GetSlots[i].parent = this;
+            inventory.GetSlots[i].OnAfterUpdate += OnSlotUpdate;
         }
         CreateSlots();//  CreateDisplay();
         AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
         AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
     }
 
-    // Update is called once per frame
+    private void OnSlotUpdate(InventorySlots _slot)
+    {
+        if (_slot.item.Id >= 0)
+        {
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Itemobject.uiDisplay;/*inventory.database.GetItem[_slot.Value.item.Id].uiDisplay*/;
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+            _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+        }
+        else
+        {
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+            _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+    }
+
+  /*  // Update is called once per frame
     void Update()
     {
         slotsOnInterface.UpdateSlotDisplay();// UpdateDisplay();
-    }
-
-  
-
-    /*public void UpdateDisplay()
-    {
-        for (int i = 0; i < inventory.Container.Items.Length; i++)
-        {
-            InventorySlots slot = inventory.Container.Items[i];
-
-            if (itemDisplayed.ContainsKey(inventory.Container.Items[i]))
-            {
-                itemDisplayed[slot].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
-            }
-            else
-            {
-                var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
-                obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
-                obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                TextMeshProUGUI textMeshPro = obj.GetComponentInChildren<TextMeshProUGUI>();
-                if (textMeshPro != null && inventory != null && inventory.Container != null && i < inventory.Container.Items.Count && slot != null)
-                {
-                    textMeshPro.text = slot.amount.ToString("n0");
-                    itemDisplayed.Add(slot, obj);
-                }
-                else
-                {
-                    // Handle the case where something is null
-                    Debug.LogError("One of the objects or components is null.");
-                }
-            }
-        }
     }*/
 
     public abstract void CreateSlots();
